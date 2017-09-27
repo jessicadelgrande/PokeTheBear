@@ -20,6 +20,10 @@ body {
 	display: flex;
 	justify-content: space-between;
 	margin: 25px;
+
+	@include bp(sml) {
+		flex-direction: column;
+	}
 }
 
 .heroContainer {
@@ -29,6 +33,7 @@ body {
 }
 
 h1 {
+	margin: 0;
 	font-size: 5.5em;
 	color: white;
 }
@@ -57,4 +62,8 @@ h1 {
 
 .card4 {
 	background-color: $cardDarkGrey;
+}
+
+h2 {
+	margin: 0;
 }
