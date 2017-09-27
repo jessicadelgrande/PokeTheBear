@@ -1,0 +1,18 @@
+@import 'partials/setup';
+@import 'partials/mixins';
+@import 'partials/variables';
+
+body {
+	color: white;
+	font-family: sans-serif;
+}
+
+.wrapper {
+	background-image: url("../../assets/LargeBackground.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100vh;
+	width: 100vw;
+}
