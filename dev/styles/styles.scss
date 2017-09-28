@@ -4,9 +4,10 @@
 
 body {
 	color: white;
-	font-family: sans-serif;
+	font-family: "haasGrotesk", sans-serif;
 	font-size: 100%;
 	background-image: url("../../assets/LargeBackground.jpg");
+	////////////////// resize bg image - file size too large
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -19,8 +20,9 @@ body {
 	height: 100%;
 	display: flex;
 	justify-content: space-between;
-	margin: 25px;
+	margin: 30px;
 
+	////////////////////// adjust media query size
 	@include bp(sml) {
 		flex-direction: column;
 	}
@@ -29,17 +31,29 @@ body {
 .heroContainer {
 	width: calc(50% - 60px);
 	text-align: left;
-	margin-right: 10px;
+	margin: 15vh 10px 0 0;
 }
 
 h1 {
 	margin: 0;
 	font-size: 5.5em;
+	line-height: 0.98em;
 	color: white;
+}
+
+.heroText {
+	font-size: 0.8em;
+	line-height: 1.2em;
+	color: white;
+
+	&.line4 {
+		color: $fontColorAccent;
+	}
 }
 
 .cardContainer {
 	width: calc(50% - 60px);
+	margin-top: 101vh;
 }
 
 .card {
@@ -66,4 +80,30 @@ h1 {
 
 h2 {
 	margin: 0;
+	font-size: 2.125em;
+	line-height: 0.9em;
+	color: $fontColorDark;
+}
+
+.par {
+	font-size: 0.8em;
+	line-height: 1.2em;
+	margin-top: 10px;
+}
+
+.footnote {
+	font-size: 0.4em;
+	margin-top: 10px;
+}
+
+.icons {
+	background-image: url("../../assets/logos.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	min-height: 100px;
+}
+
+.contactInfo {
+	display: flex;
 }

@@ -132,9 +132,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+/*
+This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Monotype with any questions regarding Web Fonts: http://www.fontshop.com
+*/
 body {
   color: white;
-  font-family: sans-serif;
+  font-family: "haasGrotesk", sans-serif;
   font-size: 100%;
   background-image: url("../../assets/LargeBackground.jpg");
   background-position: center;
@@ -148,7 +151,7 @@ body {
   height: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 25px; }
+  margin: 30px; }
   @media (max-width: 570px) {
     .wrapper {
       flex-direction: column; } }
@@ -156,15 +159,24 @@ body {
 .heroContainer {
   width: calc(50% - 60px);
   text-align: left;
-  margin-right: 10px; }
+  margin: 15vh 10px 0 0; }
 
 h1 {
   margin: 0;
   font-size: 5.5em;
+  line-height: 0.98em;
   color: white; }
 
+.heroText {
+  font-size: 0.8em;
+  line-height: 1.2em;
+  color: white; }
+  .heroText.line4 {
+    color: #e73e51; }
+
 .cardContainer {
-  width: calc(50% - 60px); }
+  width: calc(50% - 60px);
+  margin-top: 101vh; }
 
 .card {
   width: 100%;
@@ -184,4 +196,26 @@ h1 {
   background-color: rgba(37, 55, 70, 0.9); }
 
 h2 {
-  margin: 0; }
+  margin: 0;
+  font-size: 2.125em;
+  line-height: 0.9em;
+  color: #263746; }
+
+.par {
+  font-size: 0.8em;
+  line-height: 1.2em;
+  margin-top: 10px; }
+
+.footnote {
+  font-size: 0.4em;
+  margin-top: 10px; }
+
+.icons {
+  background-image: url("../../assets/logos.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  min-height: 100px; }
+
+.contactInfo {
+  display: flex; }
