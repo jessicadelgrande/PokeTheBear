@@ -2,6 +2,10 @@
 @import 'partials/mixins';
 @import 'partials/variables';
 
+// * {
+// 	border: 1px solid red;
+// }
+
 body {
 	color: white;
 	font-family: "haasGrotesk", sans-serif;
@@ -17,21 +21,25 @@ body {
 }
 
 .wrapper {
-	height: 100%;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 	margin: 30px;
 
 	////////////////////// adjust media query size
 	@include bp(sml) {
-		flex-direction: column;
+		// flex-direction: column;
 	}
 }
 
 .heroContainer {
-	width: calc(50% - 60px);
+	width: 100%;
+	height: 90vh;
 	text-align: left;
-	margin: 15vh 10px 0 0;
+	margin: 4vh 10px 0 0;
+}
+
+.heroHeader {
+	width: 50%;
 }
 
 h1 {
@@ -39,10 +47,20 @@ h1 {
 	font-size: 5.5em;
 	line-height: 0.98em;
 	color: white;
+	margin-bottom: 50px;
+}
+
+.heroTextContainer {
+	width: 100%;
+	display: flex;
+}
+
+.heroTextWrapper {
+	width: 50%;
 }
 
 .heroText {
-	font-size: 0.8em;
+	font-size: 1.2em;
 	line-height: 1.2em;
 	color: white;
 
@@ -51,14 +69,40 @@ h1 {
 	}
 }
 
+.scrollIndicatorWrapper {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.scrollIndicator {
+	background-image: url("../../assets/scroll_indicator.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: all 0.3s ease;
+	width: 32px;
+	height: 32px;
+
+	&:hover {
+		background-image: url("../../assets/scroll_indicator_hover.png");
+	}
+}
+
 .cardContainer {
-	width: calc(50% - 60px);
-	margin-top: 101vh;
+	width: 100%;
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.cardWrapper {
+	width: 55%;
 }
 
 .card {
 	width: 100%;
-	padding: 20px;
+	padding: 24px 20px;
 	margin: 12px 0;
 }
 
@@ -79,14 +123,14 @@ h1 {
 }
 
 h2 {
-	margin: 0;
-	font-size: 2.125em;
+	margin: 0 0 16px 0;
+	font-size: 2.75em;
 	line-height: 0.9em;
 	color: $fontColorDark;
 }
 
 .par {
-	font-size: 0.8em;
+	font-size: 1em;
 	line-height: 1.2em;
 	margin-top: 10px;
 }
@@ -96,14 +140,37 @@ h2 {
 	margin-top: 10px;
 }
 
-.icons {
+.card3 .cardHeader {
+	color: $fontColorMint;
+}
+
+.logos {
 	background-image: url("../../assets/logos.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100%;
+	max-height: 100%;
 	min-height: 100px;
+	margin-top: 24px;
+}
+
+.card4 {
+	display: flex;
 }
 
 .contactInfo {
 	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.contactUs span {
+	color: $fontColorAccent;
+}
+
+.wordmark {
+	width: 50%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
 }
