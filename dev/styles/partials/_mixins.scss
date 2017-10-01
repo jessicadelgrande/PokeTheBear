@@ -13,22 +13,22 @@
 
 @mixin bp($size) {
 	@if ($size == 'sml') {
-		@media (max-width: 570px) { 
+		@media (max-width: 540px) { 
 			@content; 
 		}
 	}
 
 	@if ($size == 'med') {
-		@media (max-width: 680px) { 
+		@media (max-width: 940px) { 
 			@content; 
 		}
 	}
  
-	@if $size == 'lrg' {
-		@media (max-width: 750px) { 
-			@content; 
-		}
-	}
+	// @if $size == 'lrg' {
+	// 	@media (max-width: 750px) { 
+	// 		@content; 
+	// 	}
+	// }
 }
 
 /*

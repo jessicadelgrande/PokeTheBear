@@ -2,10 +2,6 @@
 @import 'partials/mixins';
 @import 'partials/variables';
 
-// * {
-// 	border: 1px solid red;
-// }
-
 body {
 	color: white;
 	font-family: "haasGrotesk", sans-serif;
@@ -24,11 +20,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin: 30px;
-
-	////////////////////// adjust media query size
-	@include bp(sml) {
-		// flex-direction: column;
-	}
 }
 
 .heroContainer {
@@ -40,6 +31,10 @@ body {
 
 .heroHeader {
 	width: 50%;
+
+	@include bp(med) {
+		width: 100%;
+	}
 }
 
 h1 {
@@ -53,10 +48,18 @@ h1 {
 .heroTextContainer {
 	width: 100%;
 	display: flex;
+
+	@include bp(med) {
+		flex-direction: column;
+	}
 }
 
 .heroTextWrapper {
 	width: 50%;
+
+	@include bp(med) {
+		width: 100%;
+	}
 }
 
 .heroText {
@@ -74,6 +77,11 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
+
+	@include bp(med) {
+		width: 100%;
+		margin-top: 24px;
+	}
 }
 
 .scrollIndicator {
@@ -98,12 +106,16 @@ h1 {
 
 .cardWrapper {
 	width: 55%;
+
+	@include bp(med) {
+		width: 100%;
+	}
 }
 
 .card {
 	width: 100%;
 	padding: 24px 20px;
-	margin: 12px 0;
+	margin: 24px 0;
 }
 
 .card1 {
@@ -145,17 +157,23 @@ h2 {
 }
 
 .logos {
-	background-image: url("../../assets/logos.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100%;
-	max-height: 100%;
-	min-height: 100px;
+	display: flex;
+	justify-content: center;
 	margin-top: 24px;
+}
+
+.logos img {
+	height: auto;
+	max-width: 100%;
+	object-fit: contain;
 }
 
 .card4 {
 	display: flex;
+
+	@include bp(sml) {
+		flex-direction: column;
+	}
 }
 
 .contactInfo {
@@ -164,13 +182,24 @@ h2 {
 	width: 50%;
 }
 
+.card4 .contactUs {
+	margin-bottom: 12px;
+}
+
 .contactUs span {
 	color: $fontColorAccent;
 }
 
 .wordmark {
+	background-image: url("../../assets/pokethebear.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: contain;
 	width: 50%;
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
+
+	@include bp(sml) {
+		width: 100%;
+		height: 92px;
+		margin-top: 24px;
+	}
 }

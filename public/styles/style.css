@@ -160,6 +160,9 @@ body {
 
 .heroHeader {
   width: 50%; }
+  @media (max-width: 940px) {
+    .heroHeader {
+      width: 100%; } }
 
 h1 {
   margin: 0;
@@ -171,9 +174,15 @@ h1 {
 .heroTextContainer {
   width: 100%;
   display: flex; }
+  @media (max-width: 940px) {
+    .heroTextContainer {
+      flex-direction: column; } }
 
 .heroTextWrapper {
   width: 50%; }
+  @media (max-width: 940px) {
+    .heroTextWrapper {
+      width: 100%; } }
 
 .heroText {
   font-size: 1.2em;
@@ -187,6 +196,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: flex-end; }
+  @media (max-width: 940px) {
+    .scrollIndicatorWrapper {
+      width: 100%;
+      margin-top: 24px; } }
 
 .scrollIndicator {
   background-image: url("../../assets/scroll_indicator.png");
@@ -206,11 +219,14 @@ h1 {
 
 .cardWrapper {
   width: 55%; }
+  @media (max-width: 940px) {
+    .cardWrapper {
+      width: 100%; } }
 
 .card {
   width: 100%;
   padding: 24px 20px;
-  margin: 12px 0; }
+  margin: 24px 0; }
 
 .card1 {
   background-color: rgba(219, 66, 82, 0.9); }
@@ -243,27 +259,40 @@ h2 {
   color: #00c18c; }
 
 .logos {
-  background-image: url("../../assets/logos.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  max-height: 100%;
-  min-height: 100px;
+  display: flex;
+  justify-content: center;
   margin-top: 24px; }
+
+.logos img {
+  height: auto;
+  max-width: 100%;
+  object-fit: contain; }
 
 .card4 {
   display: flex; }
+  @media (max-width: 540px) {
+    .card4 {
+      flex-direction: column; } }
 
 .contactInfo {
   display: flex;
   flex-direction: column;
   width: 50%; }
 
+.card4 .contactUs {
+  margin-bottom: 12px; }
+
 .contactUs span {
   color: #e73e51; }
 
 .wordmark {
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end; }
+  background-image: url("../../assets/pokethebear.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+  width: 50%; }
+  @media (max-width: 540px) {
+    .wordmark {
+      width: 100%;
+      height: 92px;
+      margin-top: 24px; } }
