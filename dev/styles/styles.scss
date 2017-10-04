@@ -6,8 +6,7 @@ body {
 	color: white;
 	font-family: "haasGrotesk", sans-serif;
 	font-size: 100%;
-	background-image: url("../../assets/LargeBackground.jpg");
-	////////////////// resize bg image - file size too large
+	background-image: url("../../assets/LargeBackground_min.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -24,7 +23,7 @@ body {
 
 .heroContainer {
 	width: 100%;
-	height: 90vh;
+	min-height: 90vh;
 	text-align: left;
 	margin: 4vh 10px 0 0;
 }
@@ -97,6 +96,17 @@ h1 {
 	}
 }
 
+a {
+	text-decoration: none;
+
+	&:focus,
+	&:active,
+	&:visited {
+		border: none;
+		outline: none;
+	}
+}
+
 .cardContainer {
 	width: 100%;
 	margin-top: 10px;
@@ -108,6 +118,10 @@ h1 {
 	width: 55%;
 
 	@include bp(med) {
+		width: 70%;
+	}
+
+	@include bp(sml) {
 		width: 100%;
 	}
 }
@@ -156,16 +170,83 @@ h2 {
 	color: $fontColorMint;
 }
 
-.logos {
+.logoGrid {
 	display: flex;
-	justify-content: center;
-	margin-top: 24px;
+	flex-wrap: wrap;
+	margin-top: 12px;
 }
 
-.logos img {
-	height: auto;
-	max-width: 100%;
-	object-fit: contain;
+.topLogoRow {
+	display: flex;
+	width: 100%;
+	flex-wrap: nowrap;
+
+	@include bp(xsml) {
+		flex-wrap: wrap;
+	}
+}
+
+.logosTopLeft {
+	display: flex;
+	width: 50%;
+
+	@include bp(xsml) {
+		width: 100%;
+		padding: 14px 14px;
+	}
+}
+
+.logosTopRight {
+	display: flex;
+	width: 50%;
+
+	@include bp(xsml) {
+		width: 100%;
+		padding: 14px 14px;
+	}
+}
+
+.bottomLogoRow {
+	display: flex;
+	width: 100%;
+	flex-wrap: nowrap;
+
+	@include bp(xsml) {
+		flex-wrap: wrap;
+	}
+}
+
+.logosBottomLeft {
+	display: flex;
+	width: 50%;
+
+	@include bp(xsml) {
+		width: 100%;
+		padding: 14px 14px;
+	}
+}
+
+.logosBottomRight {
+	display: flex;
+	width: 50%;
+
+	@include bp(xsml) {
+		width: 100%;
+		padding: 14px 14px;
+	}
+}
+
+.agentProvocateur,
+.moetChandon,
+.pilsnerUrquell,
+.thermador,
+.belvedere,
+.grolsch,
+.peroni,
+.veuve {
+	width: 50%;
+	padding: 0 14px;
+	height: 60px;
 }
 
 .card4 {

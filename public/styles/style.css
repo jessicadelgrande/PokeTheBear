@@ -139,7 +139,7 @@ body {
   color: white;
   font-family: "haasGrotesk", sans-serif;
   font-size: 100%;
-  background-image: url("../../assets/LargeBackground.jpg");
+  background-image: url("../../assets/LargeBackground_min.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -154,7 +154,7 @@ body {
 
 .heroContainer {
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
   text-align: left;
   margin: 4vh 10px 0 0; }
 
@@ -211,6 +211,12 @@ h1 {
   .scrollIndicator:hover {
     background-image: url("../../assets/scroll_indicator_hover.png"); }
 
+a {
+  text-decoration: none; }
+  a:focus, a:active, a:visited {
+    border: none;
+    outline: none; }
+
 .cardContainer {
   width: 100%;
   margin-top: 10px;
@@ -220,6 +226,9 @@ h1 {
 .cardWrapper {
   width: 55%; }
   @media (max-width: 940px) {
+    .cardWrapper {
+      width: 70%; } }
+  @media (max-width: 736px) {
     .cardWrapper {
       width: 100%; } }
 
@@ -258,19 +267,74 @@ h2 {
 .card3 .cardHeader {
   color: #00c18c; }
 
-.logos {
+.logoGrid {
   display: flex;
-  justify-content: center;
-  margin-top: 24px; }
+  flex-wrap: wrap;
+  margin-top: 12px; }
 
-.logos img {
-  height: auto;
-  max-width: 100%;
-  object-fit: contain; }
+.topLogoRow {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap; }
+  @media (max-width: 576px) {
+    .topLogoRow {
+      flex-wrap: wrap; } }
+
+.logosTopLeft {
+  display: flex;
+  width: 50%; }
+  @media (max-width: 576px) {
+    .logosTopLeft {
+      width: 100%;
+      padding: 14px 14px; } }
+
+.logosTopRight {
+  display: flex;
+  width: 50%; }
+  @media (max-width: 576px) {
+    .logosTopRight {
+      width: 100%;
+      padding: 14px 14px; } }
+
+.bottomLogoRow {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap; }
+  @media (max-width: 576px) {
+    .bottomLogoRow {
+      flex-wrap: wrap; } }
+
+.logosBottomLeft {
+  display: flex;
+  width: 50%; }
+  @media (max-width: 576px) {
+    .logosBottomLeft {
+      width: 100%;
+      padding: 14px 14px; } }
+
+.logosBottomRight {
+  display: flex;
+  width: 50%; }
+  @media (max-width: 576px) {
+    .logosBottomRight {
+      width: 100%;
+      padding: 14px 14px; } }
+
+.agentProvocateur,
+.moetChandon,
+.pilsnerUrquell,
+.thermador,
+.belvedere,
+.grolsch,
+.peroni,
+.veuve {
+  width: 50%;
+  padding: 0 14px;
+  height: 60px; }
 
 .card4 {
   display: flex; }
-  @media (max-width: 540px) {
+  @media (max-width: 736px) {
     .card4 {
       flex-direction: column; } }
 
@@ -291,7 +355,7 @@ h2 {
   background-position: right bottom;
   background-size: contain;
   width: 50%; }
-  @media (max-width: 540px) {
+  @media (max-width: 736px) {
     .wordmark {
       width: 100%;
       height: 92px;

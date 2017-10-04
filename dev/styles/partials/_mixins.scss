@@ -1,19 +1,14 @@
-@mixin card {
-	padding: 12px;
-}
-
-@mixin cardHeader {
-}
-
-@mixin cardText {
-
-}
-
 // media breakpoints
 
 @mixin bp($size) {
+	@if ($size == 'xsml') {
+		@media (max-width: 576px) { 
+			@content; 
+		}
+	}
+
 	@if ($size == 'sml') {
-		@media (max-width: 540px) { 
+		@media (max-width: 736px) { 
 			@content; 
 		}
 	}
@@ -23,12 +18,6 @@
 			@content; 
 		}
 	}
- 
-	// @if $size == 'lrg' {
-	// 	@media (max-width: 750px) { 
-	// 		@content; 
-	// 	}
-	// }
 }
 
 /*

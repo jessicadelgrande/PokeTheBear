@@ -27,11 +27,11 @@
 		@font-face {
 			/*font-family: "NHaasGroteskTXW01-65Md";*/
 			font-family: "haasGrotesk";
-			src: url("../../assets/fonts/825382/fca16206-1413-42b5-b3dd-ce6499d2bd3f.eot?#iefix");
-			src: url("../../assets/fonts/825382/fca16206-1413-42b5-b3dd-ce6499d2bd3f.eot?#iefix") format("eot"),
-				url("../../assets/fonts/825382/34ae0cd2-c49c-4df4-8270-fcda21c1b715.woff2") format("woff2"),
-				url("../../assets/fonts/825382/9e666926-4bc9-4013-849e-dffa25a41dbd.woff") format("woff"),
-				url("../../assets/fonts/825382/37e13425-7daf-407c-ba41-43ebd7d30855.ttf") format("truetype");
+			src: url("assets/fonts/825382/fca16206-1413-42b5-b3dd-ce6499d2bd3f.eot?#iefix");
+			src: url("assets/fonts/825382/fca16206-1413-42b5-b3dd-ce6499d2bd3f.eot?#iefix") format("eot"),
+				url("assets/fonts/825382/34ae0cd2-c49c-4df4-8270-fcda21c1b715.woff2") format("woff2"),
+				url("assets/fonts/825382/9e666926-4bc9-4013-849e-dffa25a41dbd.woff") format("woff"),
+				url("assets/fonts/825382/37e13425-7daf-407c-ba41-43ebd7d30855.ttf") format("truetype");
 		}
 	</style>
 
@@ -65,9 +65,8 @@
 					</div>
 				</div>
 				<div class="scrollIndicatorWrapper">
-					<div class="scrollIndicator">
-						
-					</div>
+					<a href="#stirItUp"><div class="scrollIndicator">
+					</div></a>
 				</div>
 			</div>
 		</div> <!-- end heroContainer -->
@@ -75,7 +74,7 @@
 		<!-- holds all cards on right side -->
 		<div class="cardContainer">
 			<div class="cardWrapper">
-				<div class="card card1">
+				<div class="card card1" id="stirItUp">
 					<h2 class="cardHeader">
 						stir it<br>
 						up
@@ -121,27 +120,31 @@
 						<div class="par par1">
 							We’ve helped build beloved brands and crafted memorable brand experiences for a dynamic group of clients.
 						</div>
-						<div class="logos">
+<!-- 						<div class="logos">
 							<img src="assets/logos.png" alt="client logos: Agent Provocateur, Moet & Chandon Champagne, Pilsner Urquell, Thermador, Belvedere Vodka, Grolsch, Peroni, Veuve Clicquot">
-						</div>
-	<!-- 					<div class="logoGrid">
+						</div> -->
+						<div class="logoGrid">
 							<div class="topLogoRow">
 								<div class="logosTopLeft">
-									
+									<img class="agentProvocateur" src="assets/agentProvocateur.svg" alt="Agent Provocateur logo">
+									<img class="moetChandon" src="assets/moetChandon.svg" alt="Moet et Chandon logo">
 								</div>
 								<div class="logosTopRight">
-									
+									<img class="pilsnerUrquell" src="assets/pilsnerUrquell.svg" alt="Pilsner Urquell logo">
+									<img class="thermador" src="assets/thermador.svg" alt="Thermador logo">
 								</div>
 							</div>
 							<div class="bottomLogoRow">
 								<div class="logosBottomLeft">
-									
+									<img class="belvedere" src="assets/belvedere.svg" alt="Belvedere Vodka logo">
+									<img class="grolsch" src="assets/grolsch.svg" alt="Grolsch logo">
 								</div>
 								<div class="logosBottomRight">
-									
+									<img class="peroni" src="assets/peroni.svg" alt="Peroni logo">
+									<img class="veuve" src="assets/veuve.svg" alt="Veuve Clicquot logo">
 								</div>
 							</div>
-						</div> --> <!-- end logoGrid -->
+						</div> <!-- end logoGrid -->
 					</div>
 				</div> <!-- end card3 -->
 				<div class="card card4">
@@ -166,9 +169,22 @@
 	</div> <!-- end wrapper -->
 
 	<!-- scripts -->
-<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
-	<script src="public/scripts/main.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>$(function() {
+	    $('a[href*="#"]:not([href="#"])').click(function() {
+	        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	        var target = $(this.hash);
+	            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	        if (target.length) {
+	            $('html, body').animate({
+	             scrollTop: target.offset().top
+	            }, 1000);
+	            return false;
+	        }
+	        }
+	        });
+	    });
+	</script>
 	<!-- end scripts -->
 </body>
 </html>
