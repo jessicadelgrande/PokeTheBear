@@ -33,6 +33,7 @@ body {
 
 	@include bp(med) {
 		height: 100%;
+		padding-bottom: 30px;
 	}
 }
 
@@ -162,6 +163,14 @@ h2 {
 	font-size: 2.75em;
 	line-height: 0.9em;
 	color: $fontColorDark;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-word;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
 }
 
 .par {
@@ -281,7 +290,6 @@ h2 {
 }
 
 .contactEmail a {
-	text-decoration: none;
 	color: $fontColorMain;
 	cursor: pointer;
 
