@@ -18,6 +18,12 @@
 			@content; 
 		}
 	}
+
+	@if ($size == 'lrg') {
+		@media (min-width: 1360px) { 
+			@content; 
+		}
+	}
 }
 
 // end media breakpoints
