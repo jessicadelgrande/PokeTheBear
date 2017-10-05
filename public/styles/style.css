@@ -180,7 +180,8 @@ h1 {
   margin-bottom: 50px; }
   @media (min-width: 1360px) {
     h1 {
-      font-size: 120px; } }
+      font-size: 120px;
+      line-height: 110px; } }
 
 .heroTextContainer {
   width: 100%;
