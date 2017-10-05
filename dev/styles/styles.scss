@@ -5,7 +5,8 @@
 body {
 	color: white;
 	font-family: "haasGrotesk", sans-serif;
-	font-size: 100%;
+	// font-size: 100%;
+	font-size: 16px;
 	background-image: url("../../assets/LargeBackground_min.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
@@ -47,13 +48,16 @@ body {
 
 h1 {
 	margin: 0;
-	font-size: 5.5em;
-	line-height: 0.98em;
+	// font-size: 5.5em;
+	font-size: 88px;
+	// line-height: 0.98em;
+	line-height: 86px;
 	color: white;
 	margin-bottom: 50px;
 
 	@include bp(lrg) {
-		font-size: 7.5em;
+		// font-size: 7.5em;
+		font-size: 120px;
 	}
 }
 
@@ -76,8 +80,10 @@ h1 {
 }
 
 .heroText {
-	font-size: 1.2em;
-	line-height: 1.2em;
+	// font-size: 1.2em;
+	font-size: 19.2px;
+	// line-height: 1.2em;
+	line-height: 23px;
 	color: white;
 
 	&.line4 {
@@ -85,7 +91,8 @@ h1 {
 	}
 
 	@include bp(lrg) {
-		font-size: 2.2em;
+		// font-size: 2.2em;
+		font-size: 35.2px;
 	}
 }
 
@@ -117,9 +124,10 @@ h1 {
 a {
 	text-decoration: none;
 
+	&:link,
+	&:visited,
 	&:focus,
-	&:active,
-	&:visited {
+	&:active {
 		border: none;
 		outline: none;
 	}
@@ -168,8 +176,10 @@ a {
 
 h2 {
 	margin: 0 0 16px 0;
-	font-size: 2.75em;
-	line-height: 0.9em;
+	// font-size: 2.75em;
+	font-size: 44px;
+	// line-height: 0.9em;
+	line-height: 40px;
 	color: $fontColorDark;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
@@ -182,13 +192,16 @@ h2 {
 }
 
 .par {
-	font-size: 1em;
-	line-height: 1.2em;
+	// font-size: 1em;
+	font-size: 16px;
+	// line-height: 1.2em;
+	line-height: 19.2px;
 	margin-top: 10px;
 }
 
 .footnote {
-	font-size: 0.4em;
+	// font-size: 0.4em;
+	font-size: 6.4px;
 	margin-top: 10px;
 }
 
@@ -301,6 +314,10 @@ h2 {
 	color: $fontColorMain;
 	cursor: pointer;
 
+	&:link {
+		color: $fontColorMain;
+	}
+
 	&:visited {
 		color: $fontColorMain;
 	}
@@ -325,6 +342,7 @@ h2 {
 
 .wordmark img {
 	width: 76%;
+	display: block;
 
 	@include bp(sml) {
 		margin-top: 24px;
