@@ -161,6 +161,9 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 150px; }
+  @media (max-width: 940px) {
+    .heroContainer {
+      height: 100%; } }
 
 .heroHeader {
   width: 50%; }
@@ -186,7 +189,8 @@ h1 {
   width: 50%; }
   @media (max-width: 940px) {
     .heroTextWrapper {
-      width: 100%; } }
+      width: 100%;
+      margin-bottom: 30px; } }
 
 .heroText {
   font-size: 1.2em;
