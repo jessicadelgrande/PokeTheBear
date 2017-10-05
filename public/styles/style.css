@@ -391,8 +391,7 @@ h2 {
   align-items: flex-end; }
 
 .wordmark img {
-  width: 80%;
-  padding: 0 14px; }
+  width: 76%; }
   @media (max-width: 736px) {
     .wordmark img {
       margin-top: 24px; } }
