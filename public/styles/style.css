@@ -409,7 +409,7 @@ h2 {
 .wordmark img {
   width: 62%;
   display: block;
-  margin-bottom: -14px; }
+  margin-bottom: -6px; }
   @media (max-width: 736px) {
     .wordmark img {
       margin-top: 24px; } }
