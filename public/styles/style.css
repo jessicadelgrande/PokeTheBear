@@ -160,11 +160,20 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 150px; }
+  padding-bottom: 115px; }
   @media (max-width: 940px) {
     .heroContainer {
       min-height: 736px;
       padding-bottom: 30px; } }
+
+img.heroLogo {
+  margin-right: auto;
+  width: 115px;
+  height: auto;
+  margin-bottom: 14px; }
+  @media (min-width: 1360px) {
+    img.heroLogo {
+      width: 154px; } }
 
 .heroHeader {
   width: 50%; }
@@ -177,11 +186,11 @@ h1 {
   font-size: 88px;
   line-height: 86px;
   color: white;
-  margin-bottom: 50px; }
+  margin-bottom: 40px; }
   @media (min-width: 1360px) {
     h1 {
       font-size: 120px;
-      line-height: 110px; } }
+      line-height: 114px; } }
 
 .heroTextContainer {
   width: 100%;
@@ -205,7 +214,8 @@ h1 {
     color: #e73e51; }
   @media (min-width: 1360px) {
     .heroText {
-      font-size: 35.2px; } }
+      font-size: 35.2px;
+      line-height: 40px; } }
 
 .scrollIndicatorWrapper {
   width: 50%;
@@ -238,6 +248,9 @@ a {
   margin-top: 10px;
   display: flex;
   justify-content: flex-end; }
+  @media (min-width: 1360px) {
+    .cardContainer {
+      margin-top: 60px; } }
 
 .cardWrapper {
   width: 55%; }
@@ -394,8 +407,9 @@ h2 {
   align-items: flex-end; }
 
 .wordmark img {
-  width: 76%;
-  display: block; }
+  width: 62%;
+  display: block;
+  margin-bottom: -14px; }
   @media (max-width: 736px) {
     .wordmark img {
       margin-top: 24px; } }

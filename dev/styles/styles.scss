@@ -29,11 +29,22 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	padding-bottom: 150px;
+	padding-bottom: 115px;
 
 	@include bp(med) {
 		min-height: 736px;
 		padding-bottom: 30px;
+	}
+}
+
+img.heroLogo {
+	margin-right: auto;
+	width: 115px;
+	height: auto;
+	margin-bottom: 14px;
+
+	@include bp(lrg) {
+		width: 154px;
 	}
 }
 
@@ -50,11 +61,11 @@ h1 {
 	font-size: 88px;
 	line-height: 86px;
 	color: white;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 
 	@include bp(lrg) {
 		font-size: 120px;
-		line-height: 110px;
+		line-height: 114px;
 	}
 }
 
@@ -77,9 +88,7 @@ h1 {
 }
 
 .heroText {
-	// font-size: 1.2em;
 	font-size: 19.2px;
-	// line-height: 1.2em;
 	line-height: 23px;
 	color: white;
 
@@ -88,8 +97,8 @@ h1 {
 	}
 
 	@include bp(lrg) {
-		// font-size: 2.2em;
 		font-size: 35.2px;
+		line-height: 40px;
 	}
 }
 
@@ -135,6 +144,10 @@ a {
 	margin-top: 10px;
 	display: flex;
 	justify-content: flex-end;
+
+	@include bp(lrg) {
+		margin-top: 60px;
+	}
 }
 
 .cardWrapper {
@@ -173,9 +186,7 @@ a {
 
 h2 {
 	margin: 0 0 16px 0;
-	// font-size: 2.75em;
 	font-size: 44px;
-	// line-height: 0.9em;
 	line-height: 40px;
 	color: $fontColorDark;
 	overflow-wrap: break-word;
@@ -189,15 +200,12 @@ h2 {
 }
 
 .par {
-	// font-size: 1em;
 	font-size: 16px;
-	// line-height: 1.2em;
 	line-height: 19.2px;
 	margin-top: 10px;
 }
 
 .footnote {
-	// font-size: 0.4em;
 	font-size: 6.4px;
 	margin-top: 10px;
 }
@@ -338,8 +346,9 @@ h2 {
 }
 
 .wordmark img {
-	width: 76%;
+	width: 62%;
 	display: block;
+	margin-bottom: -14px;
 
 	@include bp(sml) {
 		margin-top: 24px;
